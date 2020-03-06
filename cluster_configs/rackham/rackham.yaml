@@ -1,0 +1,21 @@
+__default__:
+    account: "snic2017-7-245"
+    partition: "core"
+    extra: ""
+    time: "03:00:00"
+    n: 2
+    stderr: "slurm_logs/slurm-{rule}-{wildcards}.stderr"
+    stdout: "slurm_logs/slurm-{rule}-{wildcards}.stdout"
+    jobname: "[{rule}]: {wildcards}"
+
+megahit:
+        n: 8
+        time: "23:59:00"
+abricate:
+        n: 10
+        time: "03:59:00"
+abricate_summary:
+        n: 10
+        time: "0:59:00"
+
+
