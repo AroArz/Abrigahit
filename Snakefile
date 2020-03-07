@@ -2,29 +2,34 @@
 # MEGAHIT & ABRICATE
 # Aron Arzoomand 6/3 2020
 
-SAMPLES = glob_wildcards("input/{sample}_R1.fastq").sample
+SAMPLES = glob_wildcards("input/{sample}.1.fq").sample
 print(SAMPLES)
 
 rule all:
     input:
-        expand("output_megahit/{sample}/{sample}.contigs.fa", sample=SAMPLES)
+        "abricate_output/summary"
 
 rule megahit:
     input:
-            read1="input/{sample}_R1.fastq",
-            read2="input/[sample]_R2.fastq",
+            read1="input/{sample}.1.fq",
+            read2="input/{sample}.2.fq",
     output:
             contigs="output_megahit/{sample}/{sample}.contigs.fa"
     conda:
             "envs/env.yaml"
+    threads:
+            cluster_config["megahit"]["n"] if "megahit" in cluster_config else 19
     shell:
             """
-            rm -rvf output_megahit/{wildcard.sample}
+            rm -rvf output_megahit/{wildcards.sample}
             megahit \
             -1 {input.read1} \
             -2 {input.read2} \
             -o output_megahit/{wildcards.sample} \
-            --out--prefix {wildcards.sample} 
+            --out-prefix {wildcards.sample} \
+            -m 0.9 \
+            --mem-flag 0 \
+            -t {threads}
             """
 
 rule collect_contigs:

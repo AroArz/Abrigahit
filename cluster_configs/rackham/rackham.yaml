@@ -9,7 +9,7 @@ __default__:
     jobname: "[{rule}]: {wildcards}"
 
 megahit:
-        n: 8
+        n: 19
         time: "23:59:00"
 abricate:
         n: 10
