@@ -58,7 +58,7 @@ Change `input` for `rule all:` to `expand("output_megahit/{sample}.1.fq", sample
 Change pattern for `input_contigs` and `single_contigs` under `rule abricate:` to accurately reflect the path and name of your contigs.
 
 ### I want to run Abricate with other databases
-Add the databases of your liking under `rule abricate:` more information on what databases are eligible can be found [here](https://github.com/tseemann/abricate).
+Add the databases of your liking under `rule abricate:`. More information on what databases are eligible can be found [here](https://github.com/tseemann/abricate).
 
 ### Help. My run failed. How do I know what happened?
 Failed runs will create log files in
@@ -72,8 +72,8 @@ The most common problem for a failed run is if Slurm kills it due to overconsump
 
 ## Further reading
 [Minoconda](https://conda.io/miniconda.html) \
-[Snakemake](https://snakemake.readthedocs.io) \ 
-[Megahit](https://github.com/voutcn/megahit) \ 
+[Snakemake](https://snakemake.readthedocs.io) \
+[Megahit](https://github.com/voutcn/megahit) \
 [Megahit memory settings](https://github.com/voutcn/megahit/wiki/MEGAHIT-Memory-setting) \
 [Even more Megahit information](https://metagenomics.wiki/tools/assembly/megahit) \
 [Abricate](https://tseenabb/abricate) \

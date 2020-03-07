@@ -28,7 +28,7 @@ rule megahit:
             -o output_megahit/{wildcards.sample} \
             --out-prefix {wildcards.sample} \
             -m 0.9 \
-            --mem-flag 0 \
+            --mem-flag 1 \
             -t {threads}
             """
 
