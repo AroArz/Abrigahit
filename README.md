@@ -71,10 +71,10 @@ Failed runs will create log files in
 The most common problem for a failed run is if Slurm kills it due to overconsumption of memory. If this happens change to `--mem-flag 0` in your snakefile under `rule megahit:` If your run is still getting killed by slurm please see [this](https://github.com/voutcn/megahit/wiki/MEGAHIT-Memory-setting) for more information.
 
 ## Further reading
-[Minoconda](https://conda.io/miniconda.html)
-[Snakemake](https://snakemake.readthedocs.io)
-[Megahit](https://github.com/voutcn/megahit)
-[Megahit memory settings](https://github.com/voutcn/megahit/wiki/MEGAHIT-Memory-setting)
-[Even more Megahit information](https://metagenomics.wiki/tools/assembly/megahit)
-[Abricate](https://tseenabb/abricate)
+[Minoconda](https://conda.io/miniconda.html) \
+[Snakemake](https://snakemake.readthedocs.io) \ 
+[Megahit](https://github.com/voutcn/megahit) \ 
+[Megahit memory settings](https://github.com/voutcn/megahit/wiki/MEGAHIT-Memory-setting) \
+[Even more Megahit information](https://metagenomics.wiki/tools/assembly/megahit) \
+[Abricate](https://tseenabb/abricate) \
 
