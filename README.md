@@ -76,5 +76,5 @@ The most common problem for a failed run is if Slurm kills it due to overconsump
 [Megahit](https://github.com/voutcn/megahit) \
 [Megahit memory settings](https://github.com/voutcn/megahit/wiki/MEGAHIT-Memory-setting) \
 [Even more Megahit information](https://metagenomics.wiki/tools/assembly/megahit) \
-[Abricate](https://tseenann/abricate) \
+[Abricate](https://tseemann/abricate) 
 
